@@ -1,0 +1,35 @@
+<div class="container-fluid">
+
+  <div ng-include="'components/navbar/navbar.html'"></div>
+
+  <div class="jumbotron text-center">
+    <h3>Where to?</h3>
+    <p class="lead">
+      <form role="form" class="form-inline">
+        <div class="form-group">
+          <div class="input-group">
+            <input class="form-control input-lg" placeholder="http://" type="text" id="locationUrl" ng-model="url" ng-blur="urlParse()"/>
+            <span class="input-group-addon" ng-click="keyboardToggle()"><i class="fa fa-keyboard-o"></i></span>
+            <span class="input-group-btn"><button type="button" class="btn btn-success btn-lg" ng-click="navigate()">Go!</button></span>
+
+          </div>
+        </div>
+      </form>
+      <div class="row">
+        <div class="container keyboard" ng-class="{true: 'open', false: 'closed'}[keyboadIsShowing]">
+          <div class="keyboard-row" ng-repeat="row in keyboard">
+            <button type="button" class="key btn" ng-repeat="key in row" ng-click="typekey(key.key)" ng-class="{true:key.class, false:'btn-default'}[key.class.length > 0]">{{::key.key}}</button> 
+          </div>
+        </div>
+      </div>
+    </p>
+  </div>
+
+  <div class="row">
+
+  </div>
+
+  <hr>
+  <p class="text-center"><span class="fa fa-beer"></span> Crafted by @limitlis.</p>
+
+</div>

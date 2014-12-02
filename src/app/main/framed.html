@@ -1,0 +1,9 @@
+<div class="framed-controls" ng-class="fc.positions[fc.location]">
+    <span class="tab"><i class="fa fa-navicon fa-2x"></i></span>
+    <div class="container-fluid">
+        <a href="#home" class="btn btn-danger"><i class="fa fa-reply"></i></a>
+        <button class="btn btn-primary" ng-click="refresh()"><i class="fa fa-refresh"></i></button>
+        <button class="btn btn-default" ng-click="reposition()"><i class="fa fa-arrows-alt"></i></button>
+    </div>
+</div>
+<iframe src="{{targetUrl}}" frameborder="0" id="framed" data-framed></iframe>
