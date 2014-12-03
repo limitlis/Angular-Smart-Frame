@@ -10,7 +10,7 @@ angular.module('angularIframed', ['ngSanitize', 'ui.router'])
       })
       .state('framed', {
         url: '/framed',
-        templateUrl: 'app/main/framed.html',
+        templateUrl: 'components/frame/framed.html',
         controller: 'FramedCtrl'
       });
 
