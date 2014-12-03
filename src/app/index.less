@@ -5,21 +5,20 @@
     
     &.open {
         height: 200px;
+        transition: all 250ms ease-in-out;
+        margin: 0 auto;
+        padding: 0;
     }
     &.closed {
         height: 0;
+        transition: all 250ms ease-in-out;
     }
     .keyboard-row {
         margin: 5px 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
 
         .key {
-            flex-grow: 1;
-            margin: auto;
-            max-width: 60px;
+            min-width: 60px;
+            margin: 2px 5px 0;
         }
     }
 }

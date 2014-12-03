@@ -1,3 +1,4 @@
+/*global window*/
 'use strict';
 
 angular.module('angularIframed')
@@ -8,6 +9,28 @@ angular.module('angularIframed')
     '**',
   ]);
 })
+.directive('browserInfo', [function () {
+  return {
+    restrict: 'A',
+    link: function (scope, el, attrs) {
+
+      var wn = window.navigator,
+        info = {
+          navigator: {
+            userAgent: wn.userAgent,
+            platform: wn.platform,
+            vendor: wn.vendor,
+            language: wn.language,
+            online: wn.onLine
+          },
+          memory: console.memory
+        };
+
+      // console.log(scope, el, attrs);
+      scope.info = info;
+    }
+  };
+}])
 .directive('framed', [function () {
   return {
     restrict: 'A',

@@ -26,7 +26,36 @@
   </div>
 
   <div class="row">
+    <div class="col-md-8 col-md-offset-2" data-browser-info>
+        <div role="tabpanel">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#navigator" aria-controls="navigator" role="tab" data-toggle="tab">Navigator</a></li>
+            <li role="presentation"><a href="#memory" aria-controls="memory" role="tab" data-toggle="tab">Memory</a></li>
+          </ul>
 
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="navigator">  
+              <table class="table table-condensed table-striped">
+                <tr ng-repeat="(key, val) in ::info.navigator">
+                  <td><strong>{{::key}}</strong></td>
+                  <td>{{::val}}</td>
+                </tr>
+              </table>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="memory">
+              <table class="table table-condensed table-striped">
+                  <tr ng-repeat="(key, val) in info.memory">
+                    <td><strong>{{::key}}</strong></td>
+                    <td>{{::val}}</td>
+                  </tr>
+                </table>
+            </div>
+          </div>
+
+      </div>
+    </div>
   </div>
 
   <hr>
