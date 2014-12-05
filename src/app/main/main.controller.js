@@ -27,6 +27,7 @@ angular.module('angularIframed')
         };
 
       scope.info = info;
+      wn = null; // cleanup
     }
   };
 }])
