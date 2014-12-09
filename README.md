@@ -1,4 +1,4 @@
-angular-iframed
+Angular Smart Frame
 ===============
 
 A simple AngularJS wrapper that drives an iframe in which you can manually set location.
